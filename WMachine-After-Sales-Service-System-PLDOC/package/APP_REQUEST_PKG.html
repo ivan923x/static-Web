@@ -1,0 +1,428 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=MS950" />
+<script src="APP_REQUEST_PKG/report.js" type="text/javascript"></script>
+<link href="APP_REQUEST_PKG/report.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="banner">
+<table width="98%"><tr>
+<td><h2 class="banner">APP_REQUEST_PKG</h2></td>
+</tr></table></div>
+<div id="maintabs">
+<div class="currentmaintab" onclick="onSelectMainTab(this, 0)">
+<div>
+<p>Doc</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 1)">
+<div>
+<p>Details</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 2)">
+<div>
+<p>Grants</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 3)">
+<div>
+<p>References</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 4)">
+<div>
+<p>Dependencies</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 5)">
+<div>
+<p>Code</p>
+</div>
+</div>
+</div>
+<br/>
+<div id="masterreports">
+<div id="Master.0">
+<div class="currentmasterreport">
+<TABLE CELLSPACING="0" CELLPADDING="1" WIDTH="100%" BORDER="0">
+<TR><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2">      SUMMARY:  <A HREF="#field_summary">FIELD</A> | <A HREF="#type_summary">TYPE</A> | <A HREF="#method_summary">METHOD</A></FONT></TD><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2"></TR></TABLE><HR><P>  <BR>      開發專案:  <a href="https://m1.im.cyut.edu.tw/ords/app111_apex1/r/wm-after-sales-service">木工機械售後服務系統</a> (PLDoc)<br/><BR>      @headcom<BR>    </P><HR><P></P><A NAME="method_summary"></A><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="3" BORDER="1"><TR CLASS="TableHeadingColor"><TD COLSPAN="2"><FONT SIZE="+2"><B>Method Summary</B></FONT></TD><TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#create_item_trace">create_item_trace</A></B>( p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE , p_item_trace_type IN APP_ITEM_TRACE . UNIT_TYPE % TYPE , p_item_trace_doc_num IN APP_ITEM_TRACE . DOC_NUM % TYPE : = NULL , p_item_trace_qty IN APP_ITEM_TRACE . QTY % TYPE : = NULL ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>建立料件溯源紀錄</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入異常申報單主鍵, 溯源單位, 溯源單號, 溯源數量<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      溯源單位對應如下:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      1- 供應商<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      2- 生產課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      3- 售服課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      4- 設計課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      無回傳值<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.create_item_trace(:P21_REQUEST_ID, 1, :P21_TRACE1_NUM, :P21_TRACE1_QTY)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#edit_item_trace">edit_item_trace</A></B>( p_whether_to_record IN VARCHAR2 : = 'Y' , p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE , p_item_trace_type IN APP_ITEM_TRACE . UNIT_TYPE % TYPE , p_item_trace_doc_num IN APP_ITEM_TRACE . DOC_NUM % TYPE : = NULL , p_item_trace_qty IN APP_ITEM_TRACE . QTY % TYPE : = NULL ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_new_request_doc_num">get_new_request_doc_num</A></B>( p_file_day IN DATE ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>計算指定日期的最新立案單號</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入日期, 查詢並計算當日的最新立案單號<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      單號格式設定如, 1121204002 即為"民國112年12月04日編號2"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (編號2為當下最新編號, 不一定是當日第2張立案的異常申報單)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為單號字串<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.get_new_request_doc_num(to_date(:P21_FILE_DATE, 'YYYY/MM/DD')) <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_product_num">get_product_num</A></B>( p_product_id IN APP_PRODUCT . PRODUCT_ID % TYPE ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>取得產品編號</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入產品主鍵, 以查詢該產品的編號<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為編號字串<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.get_product_num(:P21_PRODUCT_ID) <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_request_doc_num">get_request_doc_num</A></B>( p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>取得異常申報單單號</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入異常申報單主鍵, 用以查詢該異常申報單的單號<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為單號字串<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.get_request_doc_num(:P12_REQUEST_ID) <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_request_full_reply">get_request_full_reply</A></B>( p_request_id IN NUMBER ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>修改料件溯源紀錄</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入是否紀錄, 異常申報單主鍵, 溯源單位, 溯源單號, 溯源數量<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      是否紀錄說明如下:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      - 只接受傳入 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      - 若為'Y'會建立新紀錄或更新已存在紀錄<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      - 若為'N'會刪除已存在紀錄<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      溯源單位對應如下:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      1- 供應商<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      2- 生產課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      3- 售服課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      4- 設計課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      無回傳值<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.edit_item_trace(:P21_TRACE1_CHECKBOX, :P21_REQUEST_ID, 1, :P21_TRACE1_NUM, :P21_TRACE1_QTY)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_request_summary_reply">get_request_summary_reply</A></B>( p_request_id IN NUMBER ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>取得申報的回覆摘要</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      以責任回覆的"臨時對策"主要內容, 並只取25個字作為摘要<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      應用例子: 客戶查詢申報狀況追蹤, 將此摘要顯示於 Report 上, 點擊按鈕供客戶進一步檢視完整內容, 可參考函數 APP_REQUEST_PKG.get_request_full_reply()<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為回覆摘要內容字串<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.get_request_summary_reply(#REQUEST_ID#)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#is_request_reply_completed">is_request_reply_completed</A></B>( p_request_id IN NUMBER ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>查詢責任回覆是否完成並提交至裁定</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      查詢異常申報單指派的責任, 回覆是否已提交, 若都提交則更改異常申報單狀態為待裁定<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      應用例子: 各責任單位進行回覆並提交後都執行此 Procedure, 以自動檢查並更新申報單目前狀況<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      無回傳值<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.is_request_reply_completed(:P38_REQUEST_ID)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#is_request_submitted">is_request_submitted</A></B>( p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE , p_return_status IN VARCHAR2 : = 'N' ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>查詢異常申報單是否已提交立案</strong> (非草稿) (提交至品管進行指派)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入異常申報單主鍵, 以查詢該異常申報單是否已提交立案 (待指派狀態)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      參數 p_return_status 可以設定如果已提交, 是否回傳申報單狀態 (只接受傳入 'Y'/'N')<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為字串類型 'Y'/'N' ('2'/'3'/'4')<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.is_request_submitted(:P22_REQUEST_ID) <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#save_attachment">save_attachment</A></B>( p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE , p_file_brower IN VARCHAR2 ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>轉移上傳附件</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      進行異常申報單立案時, 上傳的附件會先儲存在 Apex 提供的暫時資料表 (Per Session)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入參數並執行此 Procedure 時, 會將暫時資料表中的附件轉移至資料庫<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      應用例子: 當按下立案/儲存草稿按鈕時, 立案完成並連同附件儲存至資料庫<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      無回傳值<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.save_attachment(:P21_REQUEST_ID, :P50_TEMP_FILE_BROWSE)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+</TABLE>
+<P></P><A NAME="method_detail"></A><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="3" BORDER="1"><TR CLASS="TableHeadingColor"><TD COLSPAN="2"><FONT SIZE="+2"><B>Method Detail</B></FONT></TD></TABLE><A NAME="create_item_trace"></A>
+<H3>create_item_trace</H3><PRE>          <B>create_item_trace</B>( p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE , p_item_trace_type IN APP_ITEM_TRACE . UNIT_TYPE % TYPE , p_item_trace_doc_num IN APP_ITEM_TRACE . DOC_NUM % TYPE : = NULL , p_item_trace_qty IN APP_ITEM_TRACE . QTY % TYPE : = NULL ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>建立料件溯源紀錄</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入異常申報單主鍵, 溯源單位, 溯源單號, 溯源數量<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      溯源單位對應如下:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      1- 供應商<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      2- 生產課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      3- 售服課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      4- 設計課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      無回傳值<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.create_item_trace(:P21_REQUEST_ID, 1, :P21_TRACE1_NUM, :P21_TRACE1_QTY)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_request_id</CODE> - <em>Number</em> 異常申報單主鍵</DD><DD><CODE>p_item_trace_type</CODE> - <em>Number</em> 溯源單位 (1/2/3/4)</DD><DD><CODE>p_item_trace_doc_num</CODE> - <em>Varchar</em> 溯源單號</DD><DD><CODE>p_item_trace_qty</CODE> - <em>Number</em> 溯源數量</DD></DT></DL></DD></DL><HR><A NAME="edit_item_trace"></A>
+<H3>edit_item_trace</H3><PRE>          <B>edit_item_trace</B>( p_whether_to_record IN VARCHAR2 : = 'Y' , p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE , p_item_trace_type IN APP_ITEM_TRACE . UNIT_TYPE % TYPE , p_item_trace_doc_num IN APP_ITEM_TRACE . DOC_NUM % TYPE : = NULL , p_item_trace_qty IN APP_ITEM_TRACE . QTY % TYPE : = NULL ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="get_new_request_doc_num"></A>
+<H3>get_new_request_doc_num</H3><PRE>          <B>get_new_request_doc_num</B>( p_file_day IN DATE ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>計算指定日期的最新立案單號</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入日期, 查詢並計算當日的最新立案單號<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      單號格式設定如, 1121204002 即為"民國112年12月04日編號2"<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (編號2為當下最新編號, 不一定是當日第2張立案的異常申報單)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為單號字串<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.get_new_request_doc_num(to_date(:P21_FILE_DATE, 'YYYY/MM/DD')) <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_file_day</CODE> - <em>Date</em> 指定日期</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em> 最新單號字串</DD></DT></DL></DD></DL><HR><A NAME="get_product_num"></A>
+<H3>get_product_num</H3><PRE>          <B>get_product_num</B>( p_product_id IN APP_PRODUCT . PRODUCT_ID % TYPE ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>取得產品編號</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入產品主鍵, 以查詢該產品的編號<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為編號字串<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.get_product_num(:P21_PRODUCT_ID) <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_request_id</CODE> - <em>Number</em> 產品主鍵</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em> 編號字串</DD></DT></DL></DD></DL><HR><A NAME="get_request_doc_num"></A>
+<H3>get_request_doc_num</H3><PRE>          <B>get_request_doc_num</B>( p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>取得異常申報單單號</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入異常申報單主鍵, 用以查詢該異常申報單的單號<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為單號字串<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.get_request_doc_num(:P12_REQUEST_ID) <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_request_id</CODE> - <em>Number</em> 異常申報單主鍵</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em> 單號字串</DD></DT></DL></DD></DL><HR><A NAME="get_request_full_reply"></A>
+<H3>get_request_full_reply</H3><PRE>          <B>get_request_full_reply</B>( p_request_id IN NUMBER ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>修改料件溯源紀錄</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入是否紀錄, 異常申報單主鍵, 溯源單位, 溯源單號, 溯源數量<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      是否紀錄說明如下:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      - 只接受傳入 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      - 若為'Y'會建立新紀錄或更新已存在紀錄<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      - 若為'N'會刪除已存在紀錄<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      溯源單位對應如下:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      1- 供應商<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      2- 生產課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      3- 售服課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      4- 設計課<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      無回傳值<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.edit_item_trace(:P21_TRACE1_CHECKBOX, :P21_REQUEST_ID, 1, :P21_TRACE1_NUM, :P21_TRACE1_QTY)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_request_id</CODE> - <em>Number</em> 異常申報單主鍵</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em> 完整回覆</DD></DT></DL></DD></DL><HR><A NAME="get_request_summary_reply"></A>
+<H3>get_request_summary_reply</H3><PRE>          <B>get_request_summary_reply</B>( p_request_id IN NUMBER ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>取得申報的回覆摘要</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      以責任回覆的"臨時對策"主要內容, 並只取25個字作為摘要<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      應用例子: 客戶查詢申報狀況追蹤, 將此摘要顯示於 Report 上, 點擊按鈕供客戶進一步檢視完整內容, 可參考函數 APP_REQUEST_PKG.get_request_full_reply()<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為回覆摘要內容字串<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.get_request_summary_reply(#REQUEST_ID#)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_request_id</CODE> - <em>Number</em> 異常申報單主鍵</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em> 回覆摘要</DD></DT></DL></DD></DL><HR><A NAME="is_request_reply_completed"></A>
+<H3>is_request_reply_completed</H3><PRE>          <B>is_request_reply_completed</B>( p_request_id IN NUMBER ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>查詢責任回覆是否完成並提交至裁定</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      查詢異常申報單指派的責任, 回覆是否已提交, 若都提交則更改異常申報單狀態為待裁定<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      應用例子: 各責任單位進行回覆並提交後都執行此 Procedure, 以自動檢查並更新申報單目前狀況<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      無回傳值<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.is_request_reply_completed(:P38_REQUEST_ID)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_request_id</CODE> - <em>Number</em> 異常申報單主鍵</DD></DT></DL></DD></DL><HR><A NAME="is_request_submitted"></A>
+<H3>is_request_submitted</H3><PRE>          <B>is_request_submitted</B>( p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE , p_return_status IN VARCHAR2 : = 'N' ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>查詢異常申報單是否已提交立案</strong> (非草稿) (提交至品管進行指派)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入異常申報單主鍵, 以查詢該異常申報單是否已提交立案 (待指派狀態)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      參數 p_return_status 可以設定如果已提交, 是否回傳申報單狀態 (只接受傳入 'Y'/'N')<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      回傳值為字串類型 'Y'/'N' ('2'/'3'/'4')<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.is_request_submitted(:P22_REQUEST_ID) <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_request_id</CODE> - <em>Number</em> 異常申報單主鍵</DD><DD><CODE>p_return_status</CODE> - <em>Varchar</em> 是否回傳申報單狀態 ('Y'/'N')</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em></DD></DT></DL></DD></DL><HR><A NAME="save_attachment"></A>
+<H3>save_attachment</H3><PRE>          <B>save_attachment</B>( p_request_id IN APP_SERVICE_REQUEST . REQUEST_ID % TYPE , p_file_brower IN VARCHAR2 ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>轉移上傳附件</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      進行異常申報單立案時, 上傳的附件會先儲存在 Apex 提供的暫時資料表 (Per Session)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      傳入參數並執行此 Procedure 時, 會將暫時資料表中的附件轉移至資料庫<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      應用例子: 當按下立案/儲存草稿按鈕時, 立案完成並連同附件儲存至資料庫<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      無回傳值<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_REQUEST_PKG.save_attachment(:P21_REQUEST_ID, :P50_TEMP_FILE_BROWSE)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_request_id</CODE> - <em>Number</em> 異常申報單主鍵</DD><DD><CODE>p_file_brower</CODE> - <em>Varchar</em> 文件上傳 Page Item (File Browse)</DD></DT></DL></DD></DL><HR><TABLE CELLSPACING="0" CELLPADDING="1" WIDTH="100%" BORDER="0">
+<TR><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2">      SUMMARY:  <A HREF="#field_summary">FIELD</A> | <A HREF="#type_summary">TYPE</A> | <A HREF="#method_summary">METHOD</A></FONT></TD><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2"></TR></TABLE></div>
+</div>
+<div id="Master.1">
+<div class="masterreport">
+<table id="Table.0" cellpadding="0" cellspacing="0" summary="">
+<th>NAME</th>
+<th>VALUE</th>
+</tr>
+<tr>
+<td>OWNER</td>
+<td>APP111_APEX1</td>
+</tr>
+<tr>
+<td>OBJECT_NAME</td>
+<td>APP_REQUEST_PKG</td>
+</tr>
+<tr>
+<td>SUBOBJECT_NAME</td>
+<td>null</td>
+</tr>
+<tr>
+<td>OBJECT_ID</td>
+<td>151466</td>
+</tr>
+<tr>
+<td>DATA_OBJECT_ID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>OBJECT_TYPE</td>
+<td>PACKAGE</td>
+</tr>
+<tr>
+<td>CREATED</td>
+<td>09-7月&nbsp;-23</td>
+</tr>
+<tr>
+<td>LAST_DDL_TIME</td>
+<td>05-12月-23</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>2023-12-05:11:38:37</td>
+</tr>
+<tr>
+<td>STATUS</td>
+<td>VALID</td>
+</tr>
+<tr>
+<td>TEMPORARY</td>
+<td>N</td>
+</tr>
+<tr>
+<td>GENERATED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>SECONDARY</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NAMESPACE</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EDITION_NAME</td>
+<td>null</td>
+</tr>
+<tr>
+<td>SHARING</td>
+<td>NONE</td>
+</tr>
+<tr>
+<td>EDITIONABLE</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>ORACLE_MAINTAINED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>APPLICATION</td>
+<td>N</td>
+</tr>
+<tr>
+<td>DEFAULT_COLLATION</td>
+<td>USING_NLS_COMP</td>
+</tr>
+<tr>
+<td>DUPLICATED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>SHARDED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>CREATED_APPID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>CREATED_VSNID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>MODIFIED_APPID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>MODIFIED_VSNID</td>
+<td>null</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.2">
+<div class="masterreport">
+<table id="Table.1" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<th>PRIVILEGE</th>
+<th>GRANTEE</th>
+<th>GRANTABLE</th>
+<th>GRANTOR</th>
+<th>OBJECT_NAME</th>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.3">
+<div class="masterreport">
+<table id="Table.2" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<th>NAME</th>
+<th>OWNER</th>
+<th>TYPE</th>
+<th>OBJECT_ID</th>
+<th>STATUS</th>
+<th>TYPE_LINK</th>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.4">
+<div class="masterreport">
+<table id="Table.3" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<th>NAME</th>
+<th>OWNER</th>
+<th>TYPE</th>
+<th>OBJECT_ID</th>
+<th>STATUS</th>
+<th>TYPE_LINK</th>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.5">
+<div class="masterreport">
+<pre>
+PACKAGE APP_REQUEST_PKG As
+    /** 
+    * 開發專案:  &lt;a href="https://m1.im.cyut.edu.tw/ords/app111_apex1/r/wm-after-sales-service">木工機械售後服務系統&lt;/a> (PLDoc)&lt;br/>
+    * @headcom
+    */
+
+    /** 
+    * &lt;strong>計算指定日期的最新立案單號&lt;/strong>
+    * 傳入日期, 查詢並計算當日的最新立案單號
+    * 單號格式設定如, 1121204002 即為"民國112年12月04日編號2"
+    * (編號2為當下最新編號, 不一定是當日第2張立案的異常申報單)
+    * 回傳值為單號字串
+    *
+    * @example
+    * APP_REQUEST_PKG.get_new_request_doc_num(to_date(:P21_FILE_DATE, 'YYYY/MM/DD')) 
+    *
+    * @param p_file_day &lt;em>Date&lt;/em> 指定日期
+    * @returns &lt;em>Varchar&lt;/em> 最新單號字串
+    */
+    Function get_new_request_doc_num (
+        p_file_day  IN DATE
+    ) Return VARCHAR2;
+
+    /** 
+    * &lt;strong>取得異常申報單單號&lt;/strong>
+    * 傳入異常申報單主鍵, 用以查詢該異常申報單的單號
+    * 回傳值為單號字串
+    *
+    * @example
+    * APP_REQUEST_PKG.get_request_doc_num(:P12_REQUEST_ID) 
+    *
+    * @param p_request_id &lt;em>Number&lt;/em> 異常申報單主鍵
+    * @returns &lt;em>Varchar&lt;/em> 單號字串
+    */
+    Function get_request_doc_num (
+        p_request_id  IN APP_SERVICE_REQUEST.REQUEST_ID%TYPE
+    ) Return VARCHAR2;
+
+    /** 
+    * &lt;strong>取得產品編號&lt;/strong>
+    * 傳入產品主鍵, 以查詢該產品的編號
+    * 回傳值為編號字串
+    *
+    * @example
+    * APP_REQUEST_PKG.get_product_num(:P21_PRODUCT_ID) 
+    *
+    * @param p_request_id &lt;em>Number&lt;/em> 產品主鍵
+    * @returns &lt;em>Varchar&lt;/em> 編號字串
+    */
+    Function get_product_num (
+        p_product_id  IN APP_PRODUCT.PRODUCT_ID%TYPE
+    ) Return VARCHAR2;
+
+    /** 
+    * &lt;strong>查詢異常申報單是否已提交立案&lt;/strong> (非草稿) (提交至品管進行指派)
+    * 傳入異常申報單主鍵, 以查詢該異常申報單是否已提交立案 (待指派狀態)
+    * 參數 p_return_status 可以設定如果已提交, 是否回傳申報單狀態 (只接受傳入 'Y'/'N')
+    * 回傳值為字串類型 'Y'/'N' ('2'/'3'/'4')
+    *
+    * @example
+    * APP_REQUEST_PKG.is_request_submitted(:P22_REQUEST_ID) 
+    *
+    * @param p_request_id &lt;em>Number&lt;/em> 異常申報單主鍵
+    * @param p_return_status &lt;em>Varchar&lt;/em> 是否回傳申報單狀態 ('Y'/'N')
+    * @returns &lt;em>Varchar&lt;/em>
+    */
+    Function is_request_submitted (
+        p_request_id     IN APP_SERVICE_REQUEST.REQUEST_ID%TYPE,
+        p_return_status  IN VARCHAR2 := 'N'
+    ) Return VARCHAR2;
+
+    /** 
+    * &lt;strong>建立料件溯源紀錄&lt;/strong>
+    * 傳入異常申報單主鍵, 溯源單位, 溯源單號, 溯源數量
+    * 溯源單位對應如下:
+    * 1- 供應商
+    * 2- 生產課
+    * 3- 售服課
+    * 4- 設計課
+    * 無回傳值
+    *
+    * @example
+    * APP_REQUEST_PKG.create_item_trace(:P21_REQUEST_ID, 1, :P21_TRACE1_NUM, :P21_TRACE1_QTY)
+    *
+    * @param p_request_id &lt;em>Number&lt;/em> 異常申報單主鍵
+    * @param p_item_trace_type &lt;em>Number&lt;/em> 溯源單位 (1/2/3/4)
+    * @param p_item_trace_doc_num &lt;em>Varchar&lt;/em> 溯源單號
+    * @param p_item_trace_qty &lt;em>Number&lt;/em> 溯源數量
+    */
+    Procedure create_item_trace (
+        p_request_id          IN APP_SERVICE_REQUEST.REQUEST_ID%TYPE,
+        p_item_trace_type     IN APP_ITEM_TRACE.UNIT_TYPE%TYPE,
+        p_item_trace_doc_num  IN APP_ITEM_TRACE.DOC_NUM%TYPE := NULL,
+        p_item_trace_qty      IN APP_ITEM_TRACE.QTY%TYPE := NULL
+    );
+
+    /** 
+    * &lt;strong>修改料件溯源紀錄&lt;/strong>
+    * 傳入是否紀錄, 異常申報單主鍵, 溯源單位, 溯源單號, 溯源數量
+    * 是否紀錄說明如下:
+    * - 只接受傳入 'Y'/'N'
+    * - 若為'Y'會建立新紀錄或更新已存在紀錄
+    * - 若為'N'會刪除已存在紀錄
+    * 溯源單位對應如下:
+    * 1- 供應商
+    * 2- 生產課
+    * 3- 售服課
+    * 4- 設計課
+    * 無回傳值
+    *
+    * @example
+    * APP_REQUEST_PKG.edit_item_trace(:P21_TRACE1_CHECKBOX, :P21_REQUEST_ID, 1, :P21_TRACE1_NUM, :P21_TRACE1_QTY)
+    *
+    * @param p_request_id &lt;em>Number&lt;/em> 異常申報單主鍵
+    * @returns &lt;em>Varchar&lt;/em> 完整回覆
+    */
+    Function get_request_full_reply (
+        p_request_id  IN NUMBER
+    ) Return VARCHAR2;
+
+    End APP_REQUEST_PKG;
+    * @param p_whether_to_record &lt;em>Varchar&lt;/em> 是否紀錄 ('Y'/'N')
+    * @param p_request_id &lt;em>Number&lt;/em> 異常申報單主鍵
+    * @param p_item_trace_type &lt;em>Number&lt;/em> 溯源單位 (1/2/3/4)
+    * @param p_item_trace_doc_num &lt;em>Varchar&lt;/em> 溯源單號
+    * @param p_item_trace_qty &lt;em>Number&lt;/em> 溯源數量
+    */
+    Procedure edit_item_trace (
+        p_whether_to_record   IN VARCHAR2 := 'Y',
+        p_request_id          IN APP_SERVICE_REQUEST.REQUEST_ID%TYPE,
+        p_item_trace_type     IN APP_ITEM_TRACE.UNIT_TYPE%TYPE,
+        p_item_trace_doc_num  IN APP_ITEM_TRACE.DOC_NUM%TYPE := NULL,
+        p_item_trace_qty      IN APP_ITEM_TRACE.QTY%TYPE := NULL
+    );
+
+    /** 
+    * &lt;strong>轉移上傳附件&lt;/strong>
+    * 進行異常申報單立案時, 上傳的附件會先儲存在 Apex 提供的暫時資料表 (Per Session)
+    * 傳入參數並執行此 Procedure 時, 會將暫時資料表中的附件轉移至資料庫
+    * 應用例子: 當按下立案/儲存草稿按鈕時, 立案完成並連同附件儲存至資料庫
+    * 無回傳值
+    *
+    * @example
+    * APP_REQUEST_PKG.save_attachment(:P21_REQUEST_ID, :P50_TEMP_FILE_BROWSE)
+    *
+    * @param p_request_id &lt;em>Number&lt;/em> 異常申報單主鍵
+    * @param p_file_brower &lt;em>Varchar&lt;/em> 文件上傳 Page Item (File Browse)
+    */
+    Procedure save_attachment (
+        p_request_id   IN APP_SERVICE_REQUEST.REQUEST_ID%TYPE,
+        p_file_brower  IN VARCHAR2
+    );
+
+    /** 
+    * &lt;strong>查詢責任回覆是否完成並提交至裁定&lt;/strong>
+    * 查詢異常申報單指派的責任, 回覆是否已提交, 若都提交則更改異常申報單狀態為待裁定
+    * 應用例子: 各責任單位進行回覆並提交後都執行此 Procedure, 以自動檢查並更新申報單目前狀況
+    * 無回傳值
+    *
+    * @example
+    * APP_REQUEST_PKG.is_request_reply_completed(:P38_REQUEST_ID)
+    *
+    * @param p_request_id &lt;em>Number&lt;/em> 異常申報單主鍵
+    */
+    Procedure is_request_reply_completed (
+        p_request_id  IN NUMBER
+    );
+
+    /** 
+    * &lt;strong>取得申報的回覆摘要&lt;/strong>
+    * 以責任回覆的"臨時對策"主要內容, 並只取25個字作為摘要
+    * 應用例子: 客戶查詢申報狀況追蹤, 將此摘要顯示於 Report 上, 點擊按鈕供客戶進一步檢視完整內容, 可參考函數 APP_REQUEST_PKG.get_request_full_reply()
+    * 回傳值為回覆摘要內容字串
+    *
+    * @example
+    * APP_REQUEST_PKG.get_request_summary_reply(#REQUEST_ID#)
+    *
+    * @param p_request_id &lt;em>Number&lt;/em> 異常申報單主鍵
+    * @returns &lt;em>Varchar&lt;/em> 回覆摘要
+    */
+    Function get_request_summary_reply (
+        p_request_id  IN NUMBER
+    ) Return VARCHAR2;
+
+    /** 
+    * &lt;strong>取得申報的完整回覆&lt;/strong>
+    * 將所有責任回覆內容, 統整為一份長字串
+    * 應用例子: 客戶查詢申報狀況追蹤, Report 上僅顯示摘要, 點擊按鈕提供客戶進一步檢視完整內容, 摘要可參考函數 APP_REQUEST_PKG.get_request_summary_reply()
+    * 回傳值為完整回覆內容字串
+    *
+    * @example
+    * APP_REQUEST_PKG.get_request_full_reply(#REQUEST_ID#)
+    *
+</pre>
+</div>
+</div>
+</div>
+</body>
+</html>
