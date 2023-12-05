@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=MS950" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <script src="APP_DEPARTMENT_AUTH_EDIT_VIEW/report.js" type="text/javascript"></script>
 <link href="APP_DEPARTMENT_AUTH_EDIT_VIEW/report.css" type="text/css" rel="stylesheet">
 </head>
@@ -12,32 +12,32 @@
 <div id="maintabs">
 <div class="currentmaintab" onclick="onSelectMainTab(this, 0)">
 <div>
-<p>¸ê®ÆÄæ</p>
+<p>è³‡æ–™æ¬„</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 1)">
 <div>
-<p>±ÂÅv</p>
+<p>æˆæ¬Š</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 2)">
 <div>
-<p>¬Û¨Ì©Ê</p>
+<p>ç›¸ä¾æ€§</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 3)">
 <div>
-<p>¸Ô²Ó¸ê°T</p>
+<p>è©³ç´°è³‡è¨Š</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 4)">
 <div>
-<p>Ä²µoµ{¦¡</p>
+<p>è§¸ç™¼ç¨‹å¼</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 5)">
 <div>
-<p>¿ù»~</p>
+<p>éŒ¯èª¤</p>
 </div>
 </div>
 </div>
@@ -58,7 +58,7 @@
 <th>DELETABLE</th>
 </tr>
 <tr onclick="table_onSelectMasterRow(this, 0, 0)" class="currentrow">
-<td class="currentcell">³¡ªù¦WºÙ</td>
+<td class="currentcell">éƒ¨é–€åç¨±</td>
 <td class="currentcell">VARCHAR2(255&nbsp;CHAR)</td>
 <td class="currentcell">Yes</td>
 <td class="currentcell">null</td>
@@ -69,7 +69,7 @@
 <td class="currentcell">NO</td>
 </tr>
 <tr onclick="table_onSelectMasterRow(this, 0, 1)">
-<td>±ÂÅv¶µ¥Ø</td>
+<td>æˆæ¬Šé …ç›®</td>
 <td>VARCHAR2(4000)</td>
 <td>Yes</td>
 <td>null</td>
@@ -112,7 +112,7 @@
 <br/><div id="ChildTabs.2">
 <div class="currentchildtab" onclick="onSelectChildTab(this, 0)">
 <div>
-<p>°Ñ·Ó</p>
+<p>åƒç…§</p>
 </div>
 </div>
 </div>
@@ -129,11 +129,11 @@
 </tr>
 <tr>
 <td>CREATED</td>
-<td>22-10¤ë-23</td>
+<td>22-10æœˆ-23</td>
 </tr>
 <tr>
 <td>LAST_DDL_TIME</td>
-<td>01-12¤ë-23</td>
+<td>01-12æœˆ-23</td>
 </tr>
 <tr>
 <td>OWNER</td>
@@ -150,10 +150,10 @@
 <tr>
 <td>TEXT</td>
 <td>Select
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;³¡ªù¦WºÙ,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;éƒ¨é–€åç¨±,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listagg(
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_QUERY_PKG.action_link_html(
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_label&nbsp;=>&nbsp;±ÂÅv¶µ¥Ø,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_label&nbsp;=>&nbsp;æˆæ¬Šé …ç›®,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_color&nbsp;=>&nbsp;(CASE&nbsp;When&nbsp;POSITION_ID&nbsp;=&nbsp;0&nbsp;Then&nbsp;'color-15'&nbsp;Else&nbsp;'&nbsp;'&nbsp;End),
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_size&nbsp;&nbsp;=>&nbsp;3,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_link&nbsp;&nbsp;=>&nbsp;APEX_PAGE.get_url(
@@ -161,19 +161,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_items&nbsp;&nbsp;=>&nbsp;'P10018_DEPARTMENT_ID,P10018_POSITION_ID',
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_values&nbsp;=>&nbsp;DEPARTMENT_ID||','||POSITION_ID&nbsp;)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;Within&nbsp;Group&nbsp;(Order&nbsp;by&nbsp;POSITION_ID)&nbsp;±ÂÅv¶µ¥Ø
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;Within&nbsp;Group&nbsp;(Order&nbsp;by&nbsp;POSITION_ID)&nbsp;æˆæ¬Šé …ç›®
 &nbsp;&nbsp;&nbsp;&nbsp;From&nbsp;APP_DEPARTMENT_ROLE_VIEW
-&nbsp;&nbsp;&nbsp;&nbsp;Group&nbsp;by&nbsp;DEPARTMENT_ID,&nbsp;³¡ªù¦WºÙ
+&nbsp;&nbsp;&nbsp;&nbsp;Group&nbsp;by&nbsp;DEPARTMENT_ID,&nbsp;éƒ¨é–€åç¨±
 &nbsp;&nbsp;&nbsp;&nbsp;Order&nbsp;by&nbsp;DEPARTMENT_ID
 </td>
 </tr>
 <tr>
 <td>TEXT_VC</td>
 <td>Select
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;³¡ªù¦WºÙ,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;éƒ¨é–€åç¨±,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listagg(
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_QUERY_PKG.action_link_html(
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_label&nbsp;=>&nbsp;±ÂÅv¶µ¥Ø,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_label&nbsp;=>&nbsp;æˆæ¬Šé …ç›®,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_color&nbsp;=>&nbsp;(CASE&nbsp;When&nbsp;POSITION_ID&nbsp;=&nbsp;0&nbsp;Then&nbsp;'color-15'&nbsp;Else&nbsp;'&nbsp;'&nbsp;End),
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_size&nbsp;&nbsp;=>&nbsp;3,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_link&nbsp;&nbsp;=>&nbsp;APEX_PAGE.get_url(
@@ -181,9 +181,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_items&nbsp;&nbsp;=>&nbsp;'P10018_DEPARTMENT_ID,P10018_POSITION_ID',
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p_values&nbsp;=>&nbsp;DEPARTMENT_ID||','||POSITION_ID&nbsp;)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;Within&nbsp;Group&nbsp;(Order&nbsp;by&nbsp;POSITION_ID)&nbsp;±ÂÅv¶µ¥Ø
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;Within&nbsp;Group&nbsp;(Order&nbsp;by&nbsp;POSITION_ID)&nbsp;æˆæ¬Šé …ç›®
 &nbsp;&nbsp;&nbsp;&nbsp;From&nbsp;APP_DEPARTMENT_ROLE_VIEW
-&nbsp;&nbsp;&nbsp;&nbsp;Group&nbsp;by&nbsp;DEPARTMENT_ID,&nbsp;³¡ªù¦WºÙ
+&nbsp;&nbsp;&nbsp;&nbsp;Group&nbsp;by&nbsp;DEPARTMENT_ID,&nbsp;éƒ¨é–€åç¨±
 &nbsp;&nbsp;&nbsp;&nbsp;Order&nbsp;by&nbsp;DEPARTMENT_ID
 </td>
 </tr>

@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=MS950" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <script src="APP_PKG/report.js" type="text/javascript"></script>
 <link href="APP_PKG/report.css" type="text/css" rel="stylesheet">
 </head>
@@ -46,22 +46,22 @@
 <div id="Master.0">
 <div class="currentmasterreport">
 <TABLE CELLSPACING="0" CELLPADDING="1" WIDTH="100%" BORDER="0">
-<TR><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2">      SUMMARY:  <A HREF="#field_summary">FIELD</A> | <A HREF="#type_summary">TYPE</A> | <A HREF="#method_summary">METHOD</A></FONT></TD><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2"></TR></TABLE><HR><P>  <BR>      ¶}µo±M®×:  <a href="https://m1.im.cyut.edu.tw/ords/app111_apex1/r/wm-after-sales-service">¤ì¤u¾÷±ñ°â«áªA°È¨t²Î</a> (PLDoc)<br/><BR>      @headcom<BR>    </P><HR><P></P><A NAME="method_summary"></A><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="3" BORDER="1"><TR CLASS="TableHeadingColor"><TD COLSPAN="2"><FONT SIZE="+2"><B>Method Summary</B></FONT></TD><TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#check_auth">check_auth</A></B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_rights_descript IN APP_RIGHTS . DESCRIPT % TYPE ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ÀË¬d¨Ï¥ÎªÌ¥\¯à±ÂÅv</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¾Ö¦³«ü©w¨Ï¥ÎÅv­­<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¦r¦êÃş«¬ 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_auth(:APP_USER, '¥Ó³ø³æÀËµø');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
-<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#check_auth_boolean">check_auth_boolean</A></B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_rights_descript IN APP_RIGHTS . DESCRIPT % TYPE ) Return BOOLEAN ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ÀË¬d¨Ï¥ÎªÌ¥\¯à±ÂÅv</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¾Ö¦³«ü©w¨Ï¥ÎÅv­­<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¥¬ªLÃş«¬ True/False<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_auth_boolean(:APP_USER, '¥Ó³ø³æÀËµø');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
-<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#check_department">check_department</A></B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_department_name IN APP_DEPARTMENT . NAME % TYPE ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ÀË¬d¨Ï¥ÎªÌ³¡ªù</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¬°«ü©w³¡ªù¦¨­û<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¦r¦êÃş«¬ 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_department(:APP_USER, '¨t²ÎºŞ²z');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
-<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#check_department_boolean">check_department_boolean</A></B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_department_name IN APP_DEPARTMENT . NAME % TYPE ) Return BOOLEAN ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ÀË¬d¨Ï¥ÎªÌ³¡ªù</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¬°«ü©w³¡ªù¦¨­û<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¥¬ªLÃş«¬ True/False<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_department_boolean(:APP_USER, '¨t²ÎºŞ²z');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
-<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#create_sample_data">create_sample_data</A></B></CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>·s¼W½d¨Ò¸ê®Æ¦Ü¸ê®Æ®w</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (¥\¯à´ú¸Õ¸ê®Æ»P¼t°Ó¾ú¥v¸ê®Æ: 109-021 / 109-026 / 109-027 / 109-033 / 109-046 / 110-058 )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    </TD></TR>
-<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_account_application_count">get_account_application_count</A></B>( p_days IN NUMBER : = 7 ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>¨ú±oªñ´Áªº­û¤u±b¸¹¥Ó½Ğ¼Æ</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¥H¤Ñ¬°³æ¦ì, ¬d¸ßªñ´X¤Ñ¤º·s³Ğ«Ø, ¥B©|¥¼±Ò¥Î¤§±b¸¹¼Æ¶q<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¼Æ¦r¦r¦êÃş«¬<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.get_account_application_count(7); <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
-<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#initialize_data">initialize_data</A></B></CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ªì©l¤Æ¸ê®Æ®w</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ±N¸ê®Æ®wÁÙ­ì¨ì¹w³]ª¬ºA<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (­«¸mSequence, ²M°£¨Ã·s¼W³¡ªù / ­û¤u / «È¤á / ®Æ¥ó / Åv­­µ¥¹w³]¸ê®Æ)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    </TD></TR>
+<TR><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2">      SUMMARY:  <A HREF="#field_summary">FIELD</A> | <A HREF="#type_summary">TYPE</A> | <A HREF="#method_summary">METHOD</A></FONT></TD><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2"></TR></TABLE><HR><P>  <BR>      é–‹ç™¼å°ˆæ¡ˆ:  <a href="https://m1.im.cyut.edu.tw/ords/app111_apex1/r/wm-after-sales-service">æœ¨å·¥æ©Ÿæ¢°å”®å¾Œæœå‹™ç³»çµ±</a> (PLDoc)<br/><BR>      @headcom<BR>    </P><HR><P></P><A NAME="method_summary"></A><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="3" BORDER="1"><TR CLASS="TableHeadingColor"><TD COLSPAN="2"><FONT SIZE="+2"><B>Method Summary</B></FONT></TD><TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#check_auth">check_auth</A></B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_rights_descript IN APP_RIGHTS . DESCRIPT % TYPE ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æª¢æŸ¥ä½¿ç”¨è€…åŠŸèƒ½æˆæ¬Š</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦æ“æœ‰æŒ‡å®šä½¿ç”¨æ¬Šé™<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºå­—ä¸²é¡å‹ 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_auth(:APP_USER, 'ç”³å ±å–®æª¢è¦–');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#check_auth_boolean">check_auth_boolean</A></B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_rights_descript IN APP_RIGHTS . DESCRIPT % TYPE ) Return BOOLEAN ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æª¢æŸ¥ä½¿ç”¨è€…åŠŸèƒ½æˆæ¬Š</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦æ“æœ‰æŒ‡å®šä½¿ç”¨æ¬Šé™<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºå¸ƒæ—é¡å‹ True/False<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_auth_boolean(:APP_USER, 'ç”³å ±å–®æª¢è¦–');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#check_department">check_department</A></B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_department_name IN APP_DEPARTMENT . NAME % TYPE ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æª¢æŸ¥ä½¿ç”¨è€…éƒ¨é–€</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦ç‚ºæŒ‡å®šéƒ¨é–€æˆå“¡<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºå­—ä¸²é¡å‹ 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_department(:APP_USER, 'ç³»çµ±ç®¡ç†');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#check_department_boolean">check_department_boolean</A></B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_department_name IN APP_DEPARTMENT . NAME % TYPE ) Return BOOLEAN ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æª¢æŸ¥ä½¿ç”¨è€…éƒ¨é–€</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦ç‚ºæŒ‡å®šéƒ¨é–€æˆå“¡<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºå¸ƒæ—é¡å‹ True/False<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_department_boolean(:APP_USER, 'ç³»çµ±ç®¡ç†');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#create_sample_data">create_sample_data</A></B></CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æ–°å¢ç¯„ä¾‹è³‡æ–™è‡³è³‡æ–™åº«</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (åŠŸèƒ½æ¸¬è©¦è³‡æ–™èˆ‡å» å•†æ­·å²è³‡æ–™: 109-021 / 109-026 / 109-027 / 109-033 / 109-046 / 110-058 )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_account_application_count">get_account_application_count</A></B>( p_days IN NUMBER : = 7 ) Return VARCHAR2 ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>å–å¾—è¿‘æœŸçš„å“¡å·¥å¸³è™Ÿç”³è«‹æ•¸</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä»¥å¤©ç‚ºå–®ä½, æŸ¥è©¢è¿‘å¹¾å¤©å…§æ–°å‰µå»º, ä¸”å°šæœªå•Ÿç”¨ä¹‹å¸³è™Ÿæ•¸é‡<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºæ•¸å­—å­—ä¸²é¡å‹<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.get_account_application_count(7); <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      </TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#initialize_data">initialize_data</A></B></CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>åˆå§‹åŒ–è³‡æ–™åº«</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å°‡è³‡æ–™åº«é‚„åŸåˆ°é è¨­ç‹€æ…‹<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (é‡ç½®Sequence, æ¸…é™¤ä¸¦æ–°å¢éƒ¨é–€ / å“¡å·¥ / å®¢æˆ¶ / æ–™ä»¶ / æ¬Šé™ç­‰é è¨­è³‡æ–™)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    </TD></TR>
 </TABLE>
 <P></P><A NAME="method_detail"></A><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="3" BORDER="1"><TR CLASS="TableHeadingColor"><TD COLSPAN="2"><FONT SIZE="+2"><B>Method Detail</B></FONT></TD></TABLE><A NAME="check_auth"></A>
-<H3>check_auth</H3><PRE>          <B>check_auth</B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_rights_descript IN APP_RIGHTS . DESCRIPT % TYPE ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ÀË¬d¨Ï¥ÎªÌ¥\¯à±ÂÅv</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¾Ö¦³«ü©w¨Ï¥ÎÅv­­<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¦r¦êÃş«¬ 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_auth(:APP_USER, '¥Ó³ø³æÀËµø');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_user_email</CODE> - <em>Varchar</em> ¨Ï¥ÎªÌ±b¸¹ (Google EMail)</DD><DD><CODE>p_rights_descript</CODE> - <em>Varchar</em> Åv­­¦WºÙ </DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em></DD></DT></DL></DD></DL><HR><A NAME="check_auth_boolean"></A>
-<H3>check_auth_boolean</H3><PRE>          <B>check_auth_boolean</B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_rights_descript IN APP_RIGHTS . DESCRIPT % TYPE ) Return BOOLEAN ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ÀË¬d¨Ï¥ÎªÌ¥\¯à±ÂÅv</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¾Ö¦³«ü©w¨Ï¥ÎÅv­­<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¥¬ªLÃş«¬ True/False<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_auth_boolean(:APP_USER, '¥Ó³ø³æÀËµø');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_user_email</CODE> - <em>Varchar</em> ¨Ï¥ÎªÌ±b¸¹ (Google EMail)</DD><DD><CODE>p_rights_descript</CODE> - <em>Varchar</em> Åv­­¦WºÙ</DD></DT><DT><B>Returns:</B><DD> <em>Boolean</em></DD></DT></DL></DD></DL><HR><A NAME="check_department"></A>
-<H3>check_department</H3><PRE>          <B>check_department</B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_department_name IN APP_DEPARTMENT . NAME % TYPE ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ÀË¬d¨Ï¥ÎªÌ³¡ªù</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¬°«ü©w³¡ªù¦¨­û<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¦r¦êÃş«¬ 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_department(:APP_USER, '¨t²ÎºŞ²z');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_user_email</CODE> - <em>Varchar</em> ¨Ï¥ÎªÌ±b¸¹ (Google EMail)</DD><DD><CODE>p_department_name</CODE> - <em>Varchar</em> ³¡ªù¦WºÙ</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em></DD></DT></DL></DD></DL><HR><A NAME="check_department_boolean"></A>
-<H3>check_department_boolean</H3><PRE>          <B>check_department_boolean</B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_department_name IN APP_DEPARTMENT . NAME % TYPE ) Return BOOLEAN ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ÀË¬d¨Ï¥ÎªÌ³¡ªù</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¬°«ü©w³¡ªù¦¨­û<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¥¬ªLÃş«¬ True/False<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_department_boolean(:APP_USER, '¨t²ÎºŞ²z');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_user_email</CODE> - <em>Varchar</em> ¨Ï¥ÎªÌ±b¸¹ (Google EMail)</DD><DD><CODE>p_department_name</CODE> - <em>Varchar</em> ³¡ªù¦WºÙ</DD></DT><DT><B>Returns:</B><DD> <em>Boolean</em></DD></DT></DL></DD></DL><HR><A NAME="create_sample_data"></A>
-<H3>create_sample_data</H3><PRE>          <B>create_sample_data</B></PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>·s¼W½d¨Ò¸ê®Æ¦Ü¸ê®Æ®w</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (¥\¯à´ú¸Õ¸ê®Æ»P¼t°Ó¾ú¥v¸ê®Æ: 109-021 / 109-026 / 109-027 / 109-033 / 109-046 / 110-058 )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <DD><DL></DL></DD></DL><HR><A NAME="get_account_application_count"></A>
-<H3>get_account_application_count</H3><PRE>          <B>get_account_application_count</B>( p_days IN NUMBER : = 7 ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>¨ú±oªñ´Áªº­û¤u±b¸¹¥Ó½Ğ¼Æ</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¥H¤Ñ¬°³æ¦ì, ¬d¸ßªñ´X¤Ñ¤º·s³Ğ«Ø, ¥B©|¥¼±Ò¥Î¤§±b¸¹¼Æ¶q<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ¦^¶Ç­È¬°¼Æ¦r¦r¦êÃş«¬<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.get_account_application_count(7); <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_days</CODE> - <em>Number</em> ªñ´Á¤Ñ¼Æ</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em> ²Å¦X±ø¥ó¤§±b¸¹¼Æ¶q</DD></DT></DL></DD></DL><HR><A NAME="initialize_data"></A>
-<H3>initialize_data</H3><PRE>          <B>initialize_data</B></PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>ªì©l¤Æ¸ê®Æ®w</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ±N¸ê®Æ®wÁÙ­ì¨ì¹w³]ª¬ºA<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (­«¸mSequence, ²M°£¨Ã·s¼W³¡ªù / ­û¤u / «È¤á / ®Æ¥ó / Åv­­µ¥¹w³]¸ê®Æ)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <DD><DL></DL></DD></DL><HR><TABLE CELLSPACING="0" CELLPADDING="1" WIDTH="100%" BORDER="0">
+<H3>check_auth</H3><PRE>          <B>check_auth</B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_rights_descript IN APP_RIGHTS . DESCRIPT % TYPE ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æª¢æŸ¥ä½¿ç”¨è€…åŠŸèƒ½æˆæ¬Š</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦æ“æœ‰æŒ‡å®šä½¿ç”¨æ¬Šé™<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºå­—ä¸²é¡å‹ 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_auth(:APP_USER, 'ç”³å ±å–®æª¢è¦–');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_user_email</CODE> - <em>Varchar</em> ä½¿ç”¨è€…å¸³è™Ÿ (Google EMail)</DD><DD><CODE>p_rights_descript</CODE> - <em>Varchar</em> æ¬Šé™åç¨± </DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em></DD></DT></DL></DD></DL><HR><A NAME="check_auth_boolean"></A>
+<H3>check_auth_boolean</H3><PRE>          <B>check_auth_boolean</B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_rights_descript IN APP_RIGHTS . DESCRIPT % TYPE ) Return BOOLEAN ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æª¢æŸ¥ä½¿ç”¨è€…åŠŸèƒ½æˆæ¬Š</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦æ“æœ‰æŒ‡å®šä½¿ç”¨æ¬Šé™<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºå¸ƒæ—é¡å‹ True/False<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_auth_boolean(:APP_USER, 'ç”³å ±å–®æª¢è¦–');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_user_email</CODE> - <em>Varchar</em> ä½¿ç”¨è€…å¸³è™Ÿ (Google EMail)</DD><DD><CODE>p_rights_descript</CODE> - <em>Varchar</em> æ¬Šé™åç¨±</DD></DT><DT><B>Returns:</B><DD> <em>Boolean</em></DD></DT></DL></DD></DL><HR><A NAME="check_department"></A>
+<H3>check_department</H3><PRE>          <B>check_department</B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_department_name IN APP_DEPARTMENT . NAME % TYPE ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æª¢æŸ¥ä½¿ç”¨è€…éƒ¨é–€</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦ç‚ºæŒ‡å®šéƒ¨é–€æˆå“¡<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºå­—ä¸²é¡å‹ 'Y'/'N'<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_department(:APP_USER, 'ç³»çµ±ç®¡ç†');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_user_email</CODE> - <em>Varchar</em> ä½¿ç”¨è€…å¸³è™Ÿ (Google EMail)</DD><DD><CODE>p_department_name</CODE> - <em>Varchar</em> éƒ¨é–€åç¨±</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em></DD></DT></DL></DD></DL><HR><A NAME="check_department_boolean"></A>
+<H3>check_department_boolean</H3><PRE>          <B>check_department_boolean</B>( p_user_email IN APP_EMPLOYEE . EMAIL % TYPE , p_department_name IN APP_DEPARTMENT . NAME % TYPE ) Return BOOLEAN ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æª¢æŸ¥ä½¿ç”¨è€…éƒ¨é–€</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦ç‚ºæŒ‡å®šéƒ¨é–€æˆå“¡<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºå¸ƒæ—é¡å‹ True/False<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.check_department_boolean(:APP_USER, 'ç³»çµ±ç®¡ç†');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_user_email</CODE> - <em>Varchar</em> ä½¿ç”¨è€…å¸³è™Ÿ (Google EMail)</DD><DD><CODE>p_department_name</CODE> - <em>Varchar</em> éƒ¨é–€åç¨±</DD></DT><DT><B>Returns:</B><DD> <em>Boolean</em></DD></DT></DL></DD></DL><HR><A NAME="create_sample_data"></A>
+<H3>create_sample_data</H3><PRE>          <B>create_sample_data</B></PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>æ–°å¢ç¯„ä¾‹è³‡æ–™è‡³è³‡æ–™åº«</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (åŠŸèƒ½æ¸¬è©¦è³‡æ–™èˆ‡å» å•†æ­·å²è³‡æ–™: 109-021 / 109-026 / 109-027 / 109-033 / 109-046 / 110-058 )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <DD><DL></DL></DD></DL><HR><A NAME="get_account_application_count"></A>
+<H3>get_account_application_count</H3><PRE>          <B>get_account_application_count</B>( p_days IN NUMBER : = 7 ) Return VARCHAR2 ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>å–å¾—è¿‘æœŸçš„å“¡å·¥å¸³è™Ÿç”³è«‹æ•¸</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      ä»¥å¤©ç‚ºå–®ä½, æŸ¥è©¢è¿‘å¹¾å¤©å…§æ–°å‰µå»º, ä¸”å°šæœªå•Ÿç”¨ä¹‹å¸³è™Ÿæ•¸é‡<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å›å‚³å€¼ç‚ºæ•¸å­—å­—ä¸²é¡å‹<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      @example<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      APP_PKG.get_account_application_count(7); <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <DD><DL><DT><B>Parameters:</B><DD><CODE>p_days</CODE> - <em>Number</em> è¿‘æœŸå¤©æ•¸</DD></DT><DT><B>Returns:</B><DD> <em>Varchar</em> ç¬¦åˆæ¢ä»¶ä¹‹å¸³è™Ÿæ•¸é‡</DD></DT></DL></DD></DL><HR><A NAME="initialize_data"></A>
+<H3>initialize_data</H3><PRE>          <B>initialize_data</B></PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <strong>åˆå§‹åŒ–è³‡æ–™åº«</strong><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      å°‡è³‡æ–™åº«é‚„åŸåˆ°é è¨­ç‹€æ…‹<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      (é‡ç½®Sequence, æ¸…é™¤ä¸¦æ–°å¢éƒ¨é–€ / å“¡å·¥ / å®¢æˆ¶ / æ–™ä»¶ / æ¬Šé™ç­‰é è¨­è³‡æ–™)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <DD><DL></DL></DD></DL><HR><TABLE CELLSPACING="0" CELLPADDING="1" WIDTH="100%" BORDER="0">
 <TR><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2">      SUMMARY:  <A HREF="#field_summary">FIELD</A> | <A HREF="#type_summary">TYPE</A> | <A HREF="#method_summary">METHOD</A></FONT></TD><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2"></TR></TABLE></div>
 </div>
 <div id="Master.1">
@@ -96,11 +96,11 @@
 </tr>
 <tr>
 <td>CREATED</td>
-<td>09-7¤ë&nbsp;-23</td>
+<td>09-7æœˆ&nbsp;-23</td>
 </tr>
 <tr>
 <td>LAST_DDL_TIME</td>
-<td>05-12¤ë-23</td>
+<td>05-12æœˆ-23</td>
 </tr>
 <tr>
 <td>TIMESTAMP</td>
@@ -223,33 +223,33 @@
 <pre>
 PACKAGE APP_PKG As 
     /** 
-    * ¶}µo±M®×:  &lt;a href="https://m1.im.cyut.edu.tw/ords/app111_apex1/r/wm-after-sales-service">¤ì¤u¾÷±ñ°â«áªA°È¨t²Î&lt;/a> (PLDoc)&lt;br/>
+    * é–‹ç™¼å°ˆæ¡ˆ:  &lt;a href="https://m1.im.cyut.edu.tw/ords/app111_apex1/r/wm-after-sales-service">æœ¨å·¥æ©Ÿæ¢°å”®å¾Œæœå‹™ç³»çµ±&lt;/a> (PLDoc)&lt;br/>
     * @headcom
     */
 
     /**
-    * &lt;strong>ªì©l¤Æ¸ê®Æ®w&lt;/strong>
-    * ±N¸ê®Æ®wÁÙ­ì¨ì¹w³]ª¬ºA
-    * (­«¸mSequence, ²M°£¨Ã·s¼W³¡ªù / ­û¤u / «È¤á / ®Æ¥ó / Åv­­µ¥¹w³]¸ê®Æ)
+    * &lt;strong>åˆå§‹åŒ–è³‡æ–™åº«&lt;/strong>
+    * å°‡è³‡æ–™åº«é‚„åŸåˆ°é è¨­ç‹€æ…‹
+    * (é‡ç½®Sequence, æ¸…é™¤ä¸¦æ–°å¢éƒ¨é–€ / å“¡å·¥ / å®¢æˆ¶ / æ–™ä»¶ / æ¬Šé™ç­‰é è¨­è³‡æ–™)
     */
     Procedure initialize_data ; 
 
     /**
-    * &lt;strong>·s¼W½d¨Ò¸ê®Æ¦Ü¸ê®Æ®w&lt;/strong>
-    * (¥\¯à´ú¸Õ¸ê®Æ»P¼t°Ó¾ú¥v¸ê®Æ: 109-021 / 109-026 / 109-027 / 109-033 / 109-046 / 110-058 )
+    * &lt;strong>æ–°å¢ç¯„ä¾‹è³‡æ–™è‡³è³‡æ–™åº«&lt;/strong>
+    * (åŠŸèƒ½æ¸¬è©¦è³‡æ–™èˆ‡å» å•†æ­·å²è³‡æ–™: 109-021 / 109-026 / 109-027 / 109-033 / 109-046 / 110-058 )
     */
     Procedure create_sample_data ; 
 
     /**
-    * &lt;strong>ÀË¬d¨Ï¥ÎªÌ³¡ªù&lt;/strong>
-    * ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¬°«ü©w³¡ªù¦¨­û
-    * ¦^¶Ç­È¬°¥¬ªLÃş«¬ True/False
+    * &lt;strong>æª¢æŸ¥ä½¿ç”¨è€…éƒ¨é–€&lt;/strong>
+    * ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦ç‚ºæŒ‡å®šéƒ¨é–€æˆå“¡
+    * å›å‚³å€¼ç‚ºå¸ƒæ—é¡å‹ True/False
     *
     * @example
-    * APP_PKG.check_department_boolean(:APP_USER, '¨t²ÎºŞ²z');
+    * APP_PKG.check_department_boolean(:APP_USER, 'ç³»çµ±ç®¡ç†');
     *
-    * @param p_user_email &lt;em>Varchar&lt;/em> ¨Ï¥ÎªÌ±b¸¹ (Google EMail)
-    * @param p_department_name &lt;em>Varchar&lt;/em> ³¡ªù¦WºÙ
+    * @param p_user_email &lt;em>Varchar&lt;/em> ä½¿ç”¨è€…å¸³è™Ÿ (Google EMail)
+    * @param p_department_name &lt;em>Varchar&lt;/em> éƒ¨é–€åç¨±
     * @returns &lt;em>Boolean&lt;/em>
     */
     Function check_department_boolean ( 
@@ -258,15 +258,15 @@ PACKAGE APP_PKG As
     ) Return BOOLEAN; 
 
     /**
-    * &lt;strong>ÀË¬d¨Ï¥ÎªÌ³¡ªù&lt;/strong>
-    * ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¬°«ü©w³¡ªù¦¨­û
-    * ¦^¶Ç­È¬°¦r¦êÃş«¬ 'Y'/'N'
+    * &lt;strong>æª¢æŸ¥ä½¿ç”¨è€…éƒ¨é–€&lt;/strong>
+    * ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦ç‚ºæŒ‡å®šéƒ¨é–€æˆå“¡
+    * å›å‚³å€¼ç‚ºå­—ä¸²é¡å‹ 'Y'/'N'
     *
     * @example
-    * APP_PKG.check_department(:APP_USER, '¨t²ÎºŞ²z');
+    * APP_PKG.check_department(:APP_USER, 'ç³»çµ±ç®¡ç†');
     *
-    * @param p_user_email &lt;em>Varchar&lt;/em> ¨Ï¥ÎªÌ±b¸¹ (Google EMail)
-    * @param p_department_name &lt;em>Varchar&lt;/em> ³¡ªù¦WºÙ
+    * @param p_user_email &lt;em>Varchar&lt;/em> ä½¿ç”¨è€…å¸³è™Ÿ (Google EMail)
+    * @param p_department_name &lt;em>Varchar&lt;/em> éƒ¨é–€åç¨±
     * @returns &lt;em>Varchar&lt;/em>
     */
     Function check_department ( 
@@ -275,15 +275,15 @@ PACKAGE APP_PKG As
     ) Return VARCHAR2; 
 
     /**
-    * &lt;strong>ÀË¬d¨Ï¥ÎªÌ¥\¯à±ÂÅv&lt;/strong>
-    * ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¾Ö¦³«ü©w¨Ï¥ÎÅv­­
-    * ¦^¶Ç­È¬°¥¬ªLÃş«¬ True/False
+    * &lt;strong>æª¢æŸ¥ä½¿ç”¨è€…åŠŸèƒ½æˆæ¬Š&lt;/strong>
+    * ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦æ“æœ‰æŒ‡å®šä½¿ç”¨æ¬Šé™
+    * å›å‚³å€¼ç‚ºå¸ƒæ—é¡å‹ True/False
     *
     * @example
-    * APP_PKG.check_auth_boolean(:APP_USER, '¥Ó³ø³æÀËµø');
+    * APP_PKG.check_auth_boolean(:APP_USER, 'ç”³å ±å–®æª¢è¦–');
     *
-    * @param p_user_email &lt;em>Varchar&lt;/em> ¨Ï¥ÎªÌ±b¸¹ (Google EMail)
-    * @param p_rights_descript &lt;em>Varchar&lt;/em> Åv­­¦WºÙ
+    * @param p_user_email &lt;em>Varchar&lt;/em> ä½¿ç”¨è€…å¸³è™Ÿ (Google EMail)
+    * @param p_rights_descript &lt;em>Varchar&lt;/em> æ¬Šé™åç¨±
     * @returns &lt;em>Boolean&lt;/em>
     */
     Function check_auth_boolean ( 
@@ -292,15 +292,15 @@ PACKAGE APP_PKG As
     ) Return BOOLEAN; 
 
     /** 
-    * &lt;strong>ÀË¬d¨Ï¥ÎªÌ¥\¯à±ÂÅv&lt;/strong>
-    * ¨Ï¥ÎEmail¬d¸ß¨Ï¥ÎªÌ, ¬O§_¾Ö¦³«ü©w¨Ï¥ÎÅv­­
-    * ¦^¶Ç­È¬°¦r¦êÃş«¬ 'Y'/'N'
+    * &lt;strong>æª¢æŸ¥ä½¿ç”¨è€…åŠŸèƒ½æˆæ¬Š&lt;/strong>
+    * ä½¿ç”¨EmailæŸ¥è©¢ä½¿ç”¨è€…, æ˜¯å¦æ“æœ‰æŒ‡å®šä½¿ç”¨æ¬Šé™
+    * å›å‚³å€¼ç‚ºå­—ä¸²é¡å‹ 'Y'/'N'
     *
     * @example
-    * APP_PKG.check_auth(:APP_USER, '¥Ó³ø³æÀËµø');
+    * APP_PKG.check_auth(:APP_USER, 'ç”³å ±å–®æª¢è¦–');
     *
-    * @param p_user_email &lt;em>Varchar&lt;/em> ¨Ï¥ÎªÌ±b¸¹ (Google EMail)
-    * @param p_rights_descript &lt;em>Varchar&lt;/em> Åv­­¦WºÙ 
+    * @param p_user_email &lt;em>Varchar&lt;/em> ä½¿ç”¨è€…å¸³è™Ÿ (Google EMail)
+    * @param p_rights_descript &lt;em>Varchar&lt;/em> æ¬Šé™åç¨± 
     * @returns &lt;em>Varchar&lt;/em>
     */
     Function check_auth ( 
@@ -309,15 +309,15 @@ PACKAGE APP_PKG As
     ) Return VARCHAR2; 
 
     /** 
-    * &lt;strong>¨ú±oªñ´Áªº­û¤u±b¸¹¥Ó½Ğ¼Æ&lt;/strong>
-    * ¥H¤Ñ¬°³æ¦ì, ¬d¸ßªñ´X¤Ñ¤º·s³Ğ«Ø, ¥B©|¥¼±Ò¥Î¤§±b¸¹¼Æ¶q
-    * ¦^¶Ç­È¬°¼Æ¦r¦r¦êÃş«¬
+    * &lt;strong>å–å¾—è¿‘æœŸçš„å“¡å·¥å¸³è™Ÿç”³è«‹æ•¸&lt;/strong>
+    * ä»¥å¤©ç‚ºå–®ä½, æŸ¥è©¢è¿‘å¹¾å¤©å…§æ–°å‰µå»º, ä¸”å°šæœªå•Ÿç”¨ä¹‹å¸³è™Ÿæ•¸é‡
+    * å›å‚³å€¼ç‚ºæ•¸å­—å­—ä¸²é¡å‹
     *
     * @example
     * APP_PKG.get_account_application_count(7); 
     *
-    * @param p_days &lt;em>Number&lt;/em> ªñ´Á¤Ñ¼Æ
-    * @returns &lt;em>Varchar&lt;/em> ²Å¦X±ø¥ó¤§±b¸¹¼Æ¶q
+    * @param p_days &lt;em>Number&lt;/em> è¿‘æœŸå¤©æ•¸
+    * @returns &lt;em>Varchar&lt;/em> ç¬¦åˆæ¢ä»¶ä¹‹å¸³è™Ÿæ•¸é‡
     */
     Function get_account_application_count ( 
         p_days  IN NUMBER := 7 

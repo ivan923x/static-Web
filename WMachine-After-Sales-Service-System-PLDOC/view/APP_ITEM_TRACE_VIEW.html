@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=MS950" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <script src="APP_ITEM_TRACE_VIEW/report.js" type="text/javascript"></script>
 <link href="APP_ITEM_TRACE_VIEW/report.css" type="text/css" rel="stylesheet">
 </head>
@@ -12,32 +12,32 @@
 <div id="maintabs">
 <div class="currentmaintab" onclick="onSelectMainTab(this, 0)">
 <div>
-<p>¸ê®ÆÄæ</p>
+<p>è³‡æ–™æ¬„</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 1)">
 <div>
-<p>±ÂÅv</p>
+<p>æˆæ¬Š</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 2)">
 <div>
-<p>¬Û¨Ì©Ê</p>
+<p>ç›¸ä¾æ€§</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 3)">
 <div>
-<p>¸Ô²Ó¸ê°T</p>
+<p>è©³ç´°è³‡è¨Š</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 4)">
 <div>
-<p>Ä²µoµ{¦¡</p>
+<p>è§¸ç™¼ç¨‹å¼</p>
 </div>
 </div>
 <div class="maintab" onclick="onSelectMainTab(this, 5)">
 <div>
-<p>¿ù»~</p>
+<p>éŒ¯èª¤</p>
 </div>
 </div>
 </div>
@@ -80,7 +80,7 @@
 <td>YES</td>
 </tr>
 <tr onclick="table_onSelectMasterRow(this, 0, 2)">
-<td>³æ¦ì</td>
+<td>å–®ä½</td>
 <td>CHAR(9)</td>
 <td>Yes</td>
 <td>null</td>
@@ -91,7 +91,7 @@
 <td>NO</td>
 </tr>
 <tr onclick="table_onSelectMasterRow(this, 0, 3)">
-<td>³æ¸¹</td>
+<td>å–®è™Ÿ</td>
 <td>VARCHAR2(255&nbsp;CHAR)</td>
 <td>Yes</td>
 <td>null</td>
@@ -102,7 +102,7 @@
 <td>YES</td>
 </tr>
 <tr onclick="table_onSelectMasterRow(this, 0, 4)">
-<td>¼Æ¶q</td>
+<td>æ•¸é‡</td>
 <td>NUMBER(38)</td>
 <td>Yes</td>
 <td>null</td>
@@ -145,7 +145,7 @@
 <br/><div id="ChildTabs.2">
 <div class="currentchildtab" onclick="onSelectChildTab(this, 0)">
 <div>
-<p>°Ñ·Ó</p>
+<p>åƒç…§</p>
 </div>
 </div>
 </div>
@@ -162,11 +162,11 @@
 </tr>
 <tr>
 <td>CREATED</td>
-<td>22-10¤ë-23</td>
+<td>22-10æœˆ-23</td>
 </tr>
 <tr>
 <td>LAST_DDL_TIME</td>
-<td>22-10¤ë-23</td>
+<td>22-10æœˆ-23</td>
 </tr>
 <tr>
 <td>OWNER</td>
@@ -186,13 +186,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REQUEST_ID,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ITEM_TRACE_ID,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CASE&nbsp;UNIT_TYPE
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;1&nbsp;Then&nbsp;'¨ÑÀ³°Ó'
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;2&nbsp;Then&nbsp;'¥Í²£½Ò'
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;3&nbsp;Then&nbsp;'°âªA½Ò'
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;4&nbsp;Then&nbsp;'³]­p½Ò'
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;"³æ¦ì",
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOC_NUM&nbsp;"³æ¸¹",
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QTY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"¼Æ¶q"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;1&nbsp;Then&nbsp;'ä¾›æ‡‰å•†'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;2&nbsp;Then&nbsp;'ç”Ÿç”¢èª²'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;3&nbsp;Then&nbsp;'å”®æœèª²'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;4&nbsp;Then&nbsp;'è¨­è¨ˆèª²'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;"å–®ä½",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOC_NUM&nbsp;"å–®è™Ÿ",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QTY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"æ•¸é‡"
 &nbsp;&nbsp;&nbsp;&nbsp;From
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_ITEM_TRACE
 &nbsp;&nbsp;&nbsp;&nbsp;Order&nbsp;by&nbsp;UNIT_TYPE&nbsp;ASC
@@ -204,13 +204,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REQUEST_ID,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ITEM_TRACE_ID,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CASE&nbsp;UNIT_TYPE
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;1&nbsp;Then&nbsp;'¨ÑÀ³°Ó'
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;2&nbsp;Then&nbsp;'¥Í²£½Ò'
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;3&nbsp;Then&nbsp;'°âªA½Ò'
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;4&nbsp;Then&nbsp;'³]­p½Ò'
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;"³æ¦ì",
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOC_NUM&nbsp;"³æ¸¹",
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QTY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"¼Æ¶q"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;1&nbsp;Then&nbsp;'ä¾›æ‡‰å•†'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;2&nbsp;Then&nbsp;'ç”Ÿç”¢èª²'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;3&nbsp;Then&nbsp;'å”®æœèª²'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;4&nbsp;Then&nbsp;'è¨­è¨ˆèª²'
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End&nbsp;"å–®ä½",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOC_NUM&nbsp;"å–®è™Ÿ",
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QTY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"æ•¸é‡"
 &nbsp;&nbsp;&nbsp;&nbsp;From
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;APP_ITEM_TRACE
 &nbsp;&nbsp;&nbsp;&nbsp;Order&nbsp;by&nbsp;UNIT_TYPE&nbsp;ASC
